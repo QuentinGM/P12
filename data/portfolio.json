@@ -1,0 +1,112 @@
+{
+  "name": "P12 - Créer et publiez votre portfolio de dévelopeur",
+  "headerTaglineOne": "Bonjour 👋",
+  "headerTaglineTwo": "Je me présente - Quentin.",
+  "headerTaglineThree": "Je viens de terminer mon 12ème Projet.",
+  "headerTaglineFour": "Basé en Isère, France.",
+  "darkMode": true,
+  "socials": [
+    {
+      "id": "1",
+      "title": "Mon Github",
+      "link": "https://github.com/QuentinGM"
+    },
+    {
+      "id": "2",
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/quentin-girerd-martin-aa4860207/"
+    },
+    {
+      "id": "3",
+      "title": "Twitter",
+      "link": "https://twitter.com/"
+    },
+    { "id": "5", "title": "Email", "link": "mailto:quentin.girerd-martin@laposte.net" }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "OhMyFood",
+      "hoverDescription" : "Description du Projet : Je devais donc créer un site Internet ayant pour but d'afficher les menus d'un restaurant du nom de OhMyFood. Le site internet devait répondre aux attentes, donc être un site moderne avec une version responsive sur tablette et téléphone.",
+      "middleDescription" : "Compétences Acquises : ",
+      "description": "Projet OpenClassRooms / HTML / CSS.",
+      "imageSrc" : "https://i.ibb.co/D81XpQD/OhMyFood.png",
+      "url": "https://quentingm.github.io/OhMyFood/"
+    },
+    {
+      "id": "2",
+      "title": "PrintIT",
+      "description": "Projet OpenClassRooms / Optimisation.",
+      "imageSrc": "https://i.ibb.co/bW1841m/PrintIT.png",
+      "url": "https://quentingm.github.io/Projet-5/"
+    },
+    {
+      "id": "3",
+      "title": "Nina Carducci",
+      "description": "Projet OpenClassRooms / Optimisation.",
+      "imageSrc": "https://i.ibb.co/3z71KN1/Nina-Carducci.png",
+      "url": "https://p9-woad.vercel.app/"
+    },
+    {
+      "id": "4",
+      "title": "Kasa",
+      "description": "Projet OpenClassRooms / HTML / CSS / Javascript / React.",
+      "imageSrc": "https://i.ibb.co/PwyQ2FS/Kasa.png",
+      "url": "https://github.com/QuentinGM/P8"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "HTML/CSS",
+      "description": "Je suis capable de développer un site avec une base solide via le contenu HTML et CSS."
+    },
+    {
+      "id": "2",
+      "title": "JavaScript/React",
+      "description": "Je suis capable de développer un site via l'interfacte React ainsi que Javascript."
+    },
+    {
+      "id": "3",
+      "title": "Optimisation de Sites Web",
+      "description": "Je suis capable d'optimiser un site internet ayant pour but de rendre le site le plus productif et efficace possible."
+    },
+    {
+      "id": "4",
+      "title": "Retouches Photos",
+      "description": "Je peux assurer des retouches photo et même des optimisations via le logiciel Photoshop."
+    }
+  ],
+  "aboutpara": "Je me présente, je m'appelle Quentin. J'ai 24 ans et aujourd'hui je présente mon Portfolio de fin de formation dans l'organisme OpenClassRooms. J'ai donc accumulé un total de plus de 10 projets pour prétendre avoir mon diplôme en tant qu'Intégrateur Web. Sortie des études suite à un accomplissement du Bac en 2020, je me suis intéressé au Dévelopemment Web depuis Août 2023 d'où le fait que j'ai commencer à faire des études dedans.",
+  "resume": {
+    "tagline": "👋  I'm a software engineer, product designer, and maker.",
+    "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+    "experiences": [
+      {
+        "id": "1",
+        "dates": "March 2022 - Present",
+        "type": "Full Time",
+        "position": "Frontend Engineer at X",
+        "bullets": [
+          "Worked on the frontend of a React application",
+          "Worked on the frontend of a React application"
+        ]
+      },
+      {
+        "id": "2",
+        "dates": "March 2020 - March 2022",
+        "type": "Full Time",
+        "position": "Frontend Engineer at X",
+        "bullets": ["Worked on the frontend of a React application"]
+      }
+    ],
+    "education": {
+      "universityName": "University X",
+      "universityDate": "2016-2020",
+      "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    },
+    "languages": ["Javascript", "HTML5", "CSS", "Python"],
+    "frameworks": ["React", "Typescript", "NodeJs"],
+    "others": ["Figma", "AdobeXD", "AWS"]
+  }
+}
