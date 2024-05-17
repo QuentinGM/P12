@@ -18,6 +18,7 @@ export default function Home() {
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
+  const formationRef = useRef();
   const textOne = useRef();
   const textTwo = useRef();
   const textThree = useRef();
@@ -33,6 +34,14 @@ export default function Home() {
   };
 
   const handleAboutScroll = () => {
+    window.scrollTo({
+      top: aboutRef.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const handleFormationScroll = () => {
     window.scrollTo({
       top: aboutRef.current.offsetTop,
       left: 0,
@@ -62,6 +71,7 @@ export default function Home() {
         <Header
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
+          handleFormationScroll={handleFormationScroll}
         />
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
@@ -127,6 +137,18 @@ export default function Home() {
           <h1 className="tablet:m-10 text-2xl text-bold">A propos de moi.</h1>
           <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
             {data.aboutpara}
+          </p>
+        </div>
+        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={formationRef}>
+          <h1 className="tablet:m-10 text-2xl text-bold">Mes Formations</h1>
+          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+            {data.aboutpara2}
+          </p>
+          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+            {data.aboutpara3}
+          </p>
+          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+            {data.aboutpara4}
           </p>
         </div>
         <Footer />

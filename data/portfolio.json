@@ -27,8 +27,8 @@
     {
       "id": "1",
       "title": "OhMyFood",
-      "hoverDescription" : "Description du Projet : Je devais donc créer un site Internet ayant pour but d'afficher les menus d'un restaurant du nom de OhMyFood. Le site internet devait répondre aux attentes, donc être un site moderne avec une version responsive sur tablette et téléphone.",
-      "middleDescription" : "Compétences Acquises : ",
+      "hoverDescription" : "Description du Projet : Créer un site Internet ayant pour but d'afficher les menus du restaurant au nom de OhMyFood. Le site internet devait répondre aux attentes, être un site moderne avec une version responsive sur tablette et téléphone.",
+      "middleDescription" : "Compétences Acquises : - Intégrer une maquette en mobile-first / - Mettre en oeuvre des animations CSS / - Versionner mon projet avec l'aide de Git & Github.",
       "description": "Projet OpenClassRooms / HTML / CSS.",
       "imageSrc" : "https://i.ibb.co/D81XpQD/OhMyFood.png",
       "url": "https://quentingm.github.io/OhMyFood/"
@@ -36,6 +36,8 @@
     {
       "id": "2",
       "title": "PrintIT",
+      "hoverDescription" : "Description du Projet : Mise en place d'un Slider, l'objectif étant d'avoir un slider comportant 4 images avec des bulletpoint ainsi que des flèches directionnelles pour obtenir défilement d'images.",
+      "middleDescription" : "Compétence Acquise : - Programmer en utilisant les fondamentaux de JavaScript",
       "description": "Projet OpenClassRooms / Optimisation.",
       "imageSrc": "https://i.ibb.co/bW1841m/PrintIT.png",
       "url": "https://quentingm.github.io/Projet-5/"
@@ -43,6 +45,8 @@
     {
       "id": "3",
       "title": "Nina Carducci",
+      "hoverDescription" : "Description du Projet : Optimisation complet du site Internet Nina Carducci, l'objectif étant de régler les différents problèmes liés au site (Non trouvable sur Google, Chargement long).",
+      "middleDescription" : "Compétences Acquises : - Optimiser la performance d'un site web (Images/Balises Meta/Rich Snippet/Minification du code JS & CSS)",
       "description": "Projet OpenClassRooms / Optimisation.",
       "imageSrc": "https://i.ibb.co/3z71KN1/Nina-Carducci.png",
       "url": "https://p9-woad.vercel.app/"
@@ -50,6 +54,8 @@
     {
       "id": "4",
       "title": "Kasa",
+      "hoverDescription" : "Description du Projet : Création d'une application web de location immobilière avec React, développer le site de A à Z avec React. Responsive également.",
+      "middleDescription" : "Compétences Acquises : - Configurer la navigation entre les pages de l'application avec React Router / - Développer des éléments de l'interface d'un site web grâce à des composants React / - Initialiser une application avec Create React App /",
       "description": "Projet OpenClassRooms / HTML / CSS / Javascript / React.",
       "imageSrc": "https://i.ibb.co/PwyQ2FS/Kasa.png",
       "url": "https://github.com/QuentinGM/P8"
@@ -77,7 +83,10 @@
       "description": "Je peux assurer des retouches photo et même des optimisations via le logiciel Photoshop."
     }
   ],
-  "aboutpara": "Je me présente, je m'appelle Quentin. J'ai 24 ans et aujourd'hui je présente mon Portfolio de fin de formation dans l'organisme OpenClassRooms. J'ai donc accumulé un total de plus de 10 projets pour prétendre avoir mon diplôme en tant qu'Intégrateur Web. Sortie des études suite à un accomplissement du Bac en 2020, je me suis intéressé au Dévelopemment Web depuis Août 2023 d'où le fait que j'ai commencer à faire des études dedans.",
+  "aboutpara": "-- / Je me présente, je m'appelle Quentin. J'ai 24 ans et aujourd'hui je présente mon Portfolio de fin de formation dans l'organisme OpenClassRooms. J'ai donc accumulé un total de plus de 10 projets pour prétendre avoir mon diplôme en tant qu'Intégrateur Web. Sortie des études suite à un accomplissement du Bac en 2020, je me suis intéressé au Dévelopemment Web depuis Août 2023 d'où le fait que j'ai commencer à faire des études dedans. / --",
+  "aboutpara2": "2016 - Brevet des Collèges | Pont-de-Chéruy / France.",
+  "aboutpara3": "2017 - Brevet d'Études Professionnelles | Pont-de-Chéruy / France.",
+  "aboutpara4": "2020 - Bac Professionnel SN Systèmes Numériques Option RISC (Réseaux Informatiques & Systèmes Communiquants) | Nivolas-Vermelle / France.",
   "resume": {
     "tagline": "👋  I'm a software engineer, product designer, and maker.",
     "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
@@ -99,14 +108,6 @@
         "position": "Frontend Engineer at X",
         "bullets": ["Worked on the frontend of a React application"]
       }
-    ],
-    "education": {
-      "universityName": "University X",
-      "universityDate": "2016-2020",
-      "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
-    },
-    "languages": ["Javascript", "HTML5", "CSS", "Python"],
-    "frameworks": ["React", "Typescript", "NodeJs"],
-    "others": ["Figma", "AdobeXD", "AWS"]
+    ]
   }
 }

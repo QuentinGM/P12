@@ -6,7 +6,7 @@ import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
 
-const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
+const Header = ({ handleWorkScroll, handleAboutScroll, handleFormationScroll, nav }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -16,6 +16,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Determine the classes for the div based on whether the component is mounted
+  const divClassNames = `mt-10 hidden flex-row items-center justify-between sticky top-0 z-10 tablet:flex ${theme === "light" ? "bg-white" : ""} dark:text-white`;
 
   return (
     <>
@@ -31,34 +34,39 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </h1>
 
               <div className="flex items-center">
-                {data.darkMode && (
+                {mounted && data.darkMode && (
                   <Button
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
+                    classes={theme === "dark" ? "hover:bg-slate-600 text-white" : "hover:bg-slate-100"}
                   >
                     <img
                       className="h-6"
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
                       }`}
+                      alt={theme === "dark" ? "Moon" : "Sun"}
                     ></img>
                   </Button>
                 )}
 
                 <Popover.Button>
-                  <img
-                    className="h-5"
-                    src={`/images/${
-                      !open
-                        ? theme === "dark"
-                          ? "menu-white.svg"
-                          : "menu.svg"
-                        : theme === "light"
-                        ? "cancel.svg"
-                        : "cancel-white.svg"
-                    }`}
-                  ></img>
+                  {mounted && (
+                    <img
+                      className="h-5"
+                      src={`/images/${
+                        !open
+                          ? theme === "dark"
+                            ? "menu-white.svg"
+                            : "menu.svg"
+                          : theme === "light"
+                          ? "cancel.svg"
+                          : "cancel-white.svg"
+                      }`}
+                      alt="Menu Toggle"
+                    ></img>
+                  )}
                 </Popover.Button>
               </div>
             </div>
@@ -67,10 +75,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 theme === "dark" ? "bg-slate-800" : "bg-white"
               } shadow-md rounded-md`}
             >
-              {!isBlog ? (
+              {!nav ? (
                 <div className="grid grid-cols-1">
                   <Button onClick={handleWorkScroll}>Mes Projets</Button>
-                  <Button onClick={handleAboutScroll}>Ce que je peux proposer</Button>
+                  <Button onClick={handleAboutScroll}>À propos de moi</Button>
+                  <Button onClick={handleFormationScroll}>Mes Formations</Button>
                   <Button
                     onClick={() => window.open("mailto:quentin.girerd-martin@laposte.net")}
                   >
@@ -93,55 +102,57 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           </>
         )}
       </Popover>
-      <div
-        className={`mt-10 hidden flex-row items-center justify-between sticky ${
-          theme === "light" && "bg-white"
-        } dark:text-white top-0 z-10 tablet:flex`}
-      >
-        <h1
-          onClick={() => router.push("/")}
-          className="font-medium cursor-pointer mob:p-2 laptop:p-0"
-        >
-          {name}
-        </h1>
-        {!isBlog ? (
-          <div className="flex">
-            <Button onClick={handleWorkScroll}>Mes Projets</Button>
-            <Button onClick={handleAboutScroll}>Ce que je peux proposer</Button>
-            <Button onClick={() => window.open("mailto:quentin.girerd-martin@laposte.net")}>
-              Contact
-            </Button>
-            {mounted && theme && data.darkMode && (
-              <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                <img
-                  className="h-6"
-                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                ></img>
+      {mounted && (
+        <div className={divClassNames}>
+          <h1
+            onClick={() => router.push("/")}
+            className="font-medium cursor-pointer mob:p-2 laptop:p-0"
+          >
+            {name}
+          </h1>
+          {!nav ? (
+            <div className="flex">
+              <Button onClick={handleWorkScroll}>Mes Projets</Button>
+              <Button onClick={handleAboutScroll}>À propos de moi</Button>
+              <Button onClick={handleFormationScroll}>Mes Formations</Button>
+              <Button onClick={() => window.open("mailto:quentin.girerd-martin@laposte.net")}>
+                Contact
               </Button>
-            )}
-          </div>
-        ) : (
-          <div className="flex">
-
-            <Button onClick={() => window.open("mailto:quentin.girerd-martin@laposte.net")}>
-              Contact
-            </Button>
-
-            {mounted && theme && data.darkMode && (
-              <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                <img
-                  className="h-6"
-                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                ></img>
+              {mounted && theme && data.darkMode && (
+                <Button
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  classes={theme === "dark" ? "hover:bg-slate-600 text-white" : "hover:bg-slate-100"}
+                >
+                  <img
+                    className="h-6"
+                    src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                    alt={theme === "dark" ? "Moon" : "Sun"}
+                  ></img>
+                </Button>
+              )}
+            </div>
+          ) : (
+            <div className="flex">
+              <Button onClick={() => window.open("mailto:quentin.girerd-martin@laposte.net")}>
+                Contact
               </Button>
-            )}
-          </div>
-        )}
-      </div>
+
+              {mounted && theme && data.darkMode && (
+                <Button
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  classes={theme === "dark" ? "hover:bg-slate-600 text-white" : "hover:bg-slate-100"}
+                >
+                  <img
+                    className="h-6"
+                    src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                    alt={theme === "dark" ? "Moon" : "Sun"}
+                  ></img>
+                </Button>
+              )}
+            </div>
+          )}
+        </div>
+      )}
     </>
   );
 };

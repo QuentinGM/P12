@@ -27,7 +27,7 @@ const WorkCard = ({ img, name, description, onClick, hoverDescription, middleDes
           </div>
         )}
         {isHovered && middleDescription && (
-          <div className="absolute inset-x-0 text-center pt-4 pointer-events-none top-1/2 transform -translate-y-full">
+          <div className="absolute bottom-0 inset-x-0 text-center pb-4 pointer-events-none">
             <p className="text-white p-4">{middleDescription}</p>
           </div>
         )}
